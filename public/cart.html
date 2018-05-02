@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>购物车页</title>
+		<meta charset='utf-8' />
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/lpart.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/cart.css">
+	</head>
+	<body>
+		<div id='headerId' class='header'></div>
+		<div class='goodsTitle'>
+			<label>全部商品<i id="totalGoodsId">...</i></label>
+		</div>
+		<div class='cartHeader'>
+			<ul>
+				<li class='liML_1'>
+					<input type='checkbox' checked  id='cbFor' class="checkAllBtn">
+					<label for='cbFor'>全选</label>
+				</li>
+				<li class='liML_2'>商品</li>
+				<li class='liML_3'>单价</li>
+				<li class='liML_4'>数量</li>
+				<li class='liML_5'>小计</li>
+				<li class='liML_6'>操作</li>
+			</ul>
+		</div>
+		<div class='cartBodyWrap' id='cartBodyWrapId'></div>
+		<div class='cartFooter'>
+			<ul>	
+				<li class="li_1">
+					<input type="checkbox" checked class="checkAllBtn">
+					<label>全选</label>
+				</li>
+				<li class="li_2">删除选中的商品</li>
+				<li class="li_3">已选中<b style="color:#f00; font-size:16px;" id="checkedGoodsId">...</b>件商品</li>
+				<li class="li_4">
+					<label>
+						<p class="p1">总价：</p>
+						<p class="p2">￥<b style="color:#f00; font-size:16px;" id="totalMoneyId">...</b></p>
+					</label>
+					<span>
+						<p class="p1">已节省：</p>
+						<p class="p2">-￥23</p>
+					</span>
+				</li>
+				<li class="li_5">去结算</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src='js/jquery-1.8.2.min.js'></script>
+	<script type="text/javascript" src='js/config.js'></script>
+	<script type="text/javascript" src='js/common.js'></script>
+	<script type="text/javascript" src="js/jqIndex.js"></script>
+	<script type="text/javascript" src="js/cartListTpl.js"></script>
+	<script type="text/javascript" src='js/cartModule.js'></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</html>

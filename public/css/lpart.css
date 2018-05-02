@@ -1,0 +1,10 @@
+.fl{float: left;}
+.fr{float: right;}
+.mT{margin-top: 10px!important;}
+.cle:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+	visibility: hidden;
+}

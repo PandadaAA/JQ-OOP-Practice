@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>详情页</title>
+		<meta charset='utf-8' />
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/lpart.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/detail.css">
+	</head>
+	<body>
+		<div id='headerId' class='header'></div>
+		<div class='productWrap'>
+			<div class='imgLIstDiv'>
+				<div id='bigDivId' class='bigDiv'>
+					<div id='imgPopId' class='imgPop'></div>
+					<img id='bigImgId' src="images/temp/temp8.jpg">
+					<i class='zoomIcon'></i>
+				</div>
+				<div id='zoomImgId' class='zoomImg'></div>
+				<div class='smallDiv'>
+					<label id='leftBtnId'></label>
+					<div id='smallListWrap' class='smallListWrap'>
+					<ul id='smallImgListId'></ul>
+					</div>
+					<span id='rightBtnId'></span>
+				</div>
+			</div>
+			<div class='rightDiv'>
+				<div class='proTitle'>
+					<h1 id='h1Id'></h1>
+					<h2 id='h2Id'></h2>
+					<h3 id='h3Id'></h3>
+				</div>
+				<div class='addressMenu'>
+					<label>配送至</label>
+					<div class='addressTitle'>
+						<div id='addressTitleId'>请选择您的地址</div>
+						<i></i>
+					</div>
+				</div>
+				<div class='addressAll' id='addressAllId'>
+					<p>选择新地址</p>
+					<ul>
+						<li id='tabA' class="active">请选择省</li>
+						<li id='tabB'>请选择市</li>
+						<li id='tabC'>请选择区</li>
+					</ul>
+					<div id='provinceId' class="addressItem"></div>
+					<div id='cityId' class="addressItem"></div>
+					<div id='areaId' class="addressItem"></div>
+				</div>
+				<div class='chooseBtns'>
+					<div class='wrapInput'>
+						<input type='text' id='buyNumId' class='buyNum' value='1' >
+						<input type='button' id='buyAddId' class='btnAdd' value="+">
+						<input type='button' id='buyReduceId' class='btnReduce' value="-">
+					</div>
+					<a href="cart.html" target='_blank' class='gotoCartBtn'>加入购物车</a>
+				</div>	
+			</div> 
+		</div>
+	</body>
+	<script type="text/javascript" src='js/jquery-1.8.2.min.js'></script>
+	<script type="text/javascript" src='js/config.js'></script>
+	<script type="text/javascript" src='js/common.js'></script>
+	<script type="text/javascript" src="js/addressMenu.js"></script>
+	<script type="text/javascript" src='js/productDetail.js'></script>
+	<script type="text/javascript" src="js/jqIndex.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</html>
