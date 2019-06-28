@@ -1,5 +1,5 @@
 /************
- *date=20170524
+ *date=201707
  *author:pan
  *info:整站配置信息
  */
@@ -11,15 +11,13 @@
 
  //api接口列表
  var APILIST={
- 	//本地假数据
+ 	//本地数据
  	sliderImg:'../data/sliderImg.js',
- 	topNavColumn:'../data/topNavColumn.js',
+	topNavColumn:'../data/topNavColumn.js',
+	subNavApi:'../data/navNavColumn.js',
+	productBlock :'../data/productBlock.js',
 
  	//远程接口
- 	oneapi:SITEURL + 'zuoye/php/oneapi.php',
- 	titleNavData : SITEURL + 'zuoye/php/titleNavData.php',
- 	subNavApi : SITEURL + 'zuoye/php/subNavApi.php',
- 	productBlock : SITEURL + 'zuoye/php/productBlock.php',
  	smallImgData : SITEURL + 'zuoye/php/smallImgData.php',
 
  	//商品详情页pid

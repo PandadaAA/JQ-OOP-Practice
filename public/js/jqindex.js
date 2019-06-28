@@ -1,21 +1,18 @@
 /************
- *date=20170522
+ *date=201707
  *author:pan
- *info:首页js jquery版本
+ *info:首页js 
  */
 
  /*顶部搜索框*/
 function searchFn(){
 	$('#inTxt').on({
 		focus:function(){$(this).attr('value','');},
-		blur:function(){$(this).attr('value','抢十亿神券');},
+		blur:function(){$(this).attr('value','点我试试');},
 	});    //on()封装了js的addEventListener,它可以绑定多个事件
 	$('.inButton').on('click',function(){
-		console.log('按钮被点击');
+		alert('你点击了搜索'+ '搜索条件为：'+ $('#inTxt').val());
 	});
-	/*$('#inTxt').focus(function(){
-		$(this).attr('value','');
-	});*/  //方法.focus()封装了js的onfocus，它只能绑定一个事件
 };
 
 
@@ -110,51 +107,28 @@ function sliderDot(_number){
 
 //调用ajax方法生成轮播图片
 function ereateSliderImg(){
-	$.ajax({
-		url:APILIST.sliderImg,
-		type:'get',
-		dataType:'json',
-		success:function(d){
-			var _length=d.imgs.length;
-			var _sliderUl=$('#sliderUl');
+	getAjax(APILIST.sliderImg, function(d){
+		var _length=d.imgs.length;
+		var _sliderUl=$('#sliderUl');
 
-			for(var i=0; i<_length; i++ ){
-				$('<li/>',{}).html(function(){
-					$('<img/>',{})
-						.attr('src',d.imgs[i].url)
-						.appendTo( $(this) );
-				}).appendTo( _sliderUl )
-			}
-			sliderFn();//成功获取数据后绑定事件
+		for(var i=0; i<_length; i++ ){
+			$('<li/>',{}).html(function(){
+				$('<img/>',{})
+					.attr('src',d.imgs[i].url)
+					.appendTo( $(this) );
+			}).appendTo( _sliderUl )
 		}
+		sliderFn();//成功获取数据后绑定事件
 	})
 };
 
 //调用ajax方法生成topNav栏目导航
-// function topNavColumn(){
-// 	$.ajax({
-// 		url:'../data/topNavColumn.js',
-// 		type:'get',
-// 		dataType:'json',
-// 		success:function(d){
-// 			var _length=d.topNavs.length;
-// 			var _topNavUlId=$('#topNavUlId');
-
-// 			for(var i=0; i<_length; i++ ){
-// 				$('<li/>',{})
-// 					.html( d.topNavs[i].column )
-// 					.appendTo( _topNavUlId );
-// 			}
-// 		}
-// 	})
-// };
 function topNavColumn(){
 	getAjax(APILIST.topNavColumn,function(d){
 		var _length=d.topNavs.length;
 	 	var _topNavUlId=$('#topNavUlId');
 
 	 	for(var i=0; i<_length; i++ ){
-	 		//console.log(d.topNavs[i].borR);
 
 	 		if(d.topNavs[i].borR != undefined){
 	 			//有borR的
@@ -171,9 +145,10 @@ function topNavColumn(){
 	});
 };
 
+
 //调用ajax方法生成subNav侧边菜单栏
 function createSubNav(){
-	getAjaxJsonp(APILIST.subNavApi,function(d){
+	getAjax(APILIST.subNavApi,function(d){
 		var _d=d.productList;
 		var _length=_d.length;
 	 	var _subNavUlId=$('#subNavUlId');
@@ -203,8 +178,13 @@ function createSubNav(){
 
 //享品质产品列表
 function productBlockFn(){
-	getAjaxJsonp(APILIST.productBlock,function(d){
-		var _d=d.pb;
+	getAjaxJsonp(APILIST.productBlock,function(d){		
+		var _d=[];
+		if(d.responseText) {
+			_d = JSON.parse(d.responseText);
+		}else {
+			_d = d;
+		}
 		var _length=_d.length;
 	 	var _productBlock=$('#productBlock');
 
@@ -214,8 +194,7 @@ function productBlockFn(){
 		 			'data-oldprice':_d[i].oldprice,
 		 			'data-pid':_d[i].pid,
 		 			'data-price':_d[i].price,
-		 			'href':'productDetail.html?pid=' + _d[i].pid,
-		 			'target':'_blank'
+		 			'href':'productDetail.html?pid=' + _d[i].pid
 		 		})
 		 		.html(function(){
 		 			var _self=$(this);

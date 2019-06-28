@@ -1,41 +1,24 @@
 /************
- *date=20170518
+ *date=201707
  *author:pan
  *info:文件入口
  */
 
-//js版本
-/*window.onload=function(){
-	searchFn();
-	slideFn();
-}*/
-
-//jq版本
+//jq版本, 用于jqindex.js
 $(function(){
-
-//搜索框
-	//searchFn();
-	
+//首页搜索框
+	searchFn();
 //ajax生成head栏目导航
 	topNavColumn();
-
-//subNav侧边菜单
-	//createSubNav();
 
 //ajax生成轮播图片
 	//ereateSliderImg();
 
+//subNav侧边菜单
+	//createSubNav();
+
+
 //享品质产品列表
 	productBlockFn();
 
-//测试远程接口
-	getAjaxJsonp( APILIST.oneapi,function(d){
-	 	//console.log(d);
-	});
-	getAjaxJsonp( APILIST.titleNavData,function(d){
-	 	//console.log(d);
-	});
-	getAjaxJsonp( APILIST.subNavApi,function(d){
-		//console.log(d);
-	});
 });

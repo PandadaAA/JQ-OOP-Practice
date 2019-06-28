@@ -1,5 +1,5 @@
 /************
- *date=20170526
+ *date=201707
  *author:pan
  *info:首屏侧边菜单 OO版本 
  */
@@ -25,7 +25,7 @@ $(function(){
 SubNavModule.prototype={
 	init:function(){
 		var _self=this;
-		_self.getAjax();
+		_self.getData();
 	},
 //创建菜单li
 	createLi:function(_d, _length){
@@ -56,14 +56,18 @@ SubNavModule.prototype={
 //菜单li内的点击事件
 	clickEvent:function(_this){
 		var _self=this;
-		console.log(_this.html());
+		alert(_this.html());
 	},
 //获取侧边菜单数据
-	getAjax:function(){
+	getData:function(){
 		var _self=this;
-
-		getAjaxJsonp(APILIST.subNavApi,function(d){
-			var _d=d.productList;
+		getAjax(APILIST.subNavApi,function(d){
+			var _d = [];
+			if(d.responseText) {
+				_d = JSON.parse(d.responseText).productList;
+			}else{
+				_d=d.productList	
+			}
 			var _length=_d.length;
 			_self.createLi(_d, _length);
 		});

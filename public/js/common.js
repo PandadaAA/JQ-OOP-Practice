@@ -1,11 +1,10 @@
 /************
- *date=20170518
+ *date=201707
  *author:pan
  *info:js通用方法
  */
 
-
-//弃用 20170224
+//获取id方法
 function getId(n){
 	return document.getElementById(n);
 }
@@ -17,6 +16,9 @@ function getAjax(_url,callback){
 		type:'get',
 		dataType:'json',
 		success:function(d){
+			callback(d);
+		},
+		error:function(d){
 			callback(d);
 		}
 	})
@@ -30,6 +32,9 @@ function getAjaxJsonp(_url,callback){
 		dataType:'jsonp',
 		jsonp:'callback',
 		success:function(d){
+			callback(d);
+		},
+		error:function(d){
 			callback(d);
 		}
 	})
@@ -45,8 +50,6 @@ function getHeader(){
 		success:function(d){
 			var _headerId=$('#headerId');
 			_headerId.prepend(d);
-			//搜索框
-			searchFn();
 		}
 	})
 }

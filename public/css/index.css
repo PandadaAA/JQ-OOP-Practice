@@ -1,80 +1,437 @@
-
-body{background: #f6f6f6;}
+body {
+	background: #f6f6f6;
+}
 
 /*header*/
-.header{width: 1190px;height:170px;margin: 0 auto;position: relative;}
-.header label{width: 190px;height: 170px;float: left;background: url(../images/logo.jpg) no-repeat center #fff ;
-	/*box-shadow:0 1px 0 1px #999;*/}
-.userMenu{width: 100%;height: 30px;color: #666;background-color:#E3E4E5;border: 1px solid #DDDDDD;}
-.userMenu label{width: auto;height: 30px;float: left;background: url(../images/weigit/icon_1.jpg) no-repeat left;
-	margin-left: 20px;padding-left: 20px;line-height: 30px;}
-.userMenu ul{float: right;padding-top: 5px;}
-.userMenu ul li{display: inline;padding: 0 10px;/*line-height: 30px;*/border-right: 1px solid #999;}
-.searchDiv{width: 635px;height: 55px;position: absolute;left: 350;top: 55px;}
-.inTxt{width: 500px;height: 35px;float: left;font-size: 14px;color: #999;padding-left: 5px;border: 1px solid #f00;}
-.inButton{width: 50px;height: 35px;float: left;border: 0px;
-	background:url(../images/weigit/icon_2.png) no-repeat center #F10215;cursor: pointer;}
-.myShopBtn{width: 190px;height: 35px;position: absolute;right: 65px;top: 55px;color: #f00;
-	background: url(../images/weigit/icon_3.jpg) no-repeat 30px center #fff;cursor: pointer;
-	border: 1px solid #E3E4E5;font-size: 12px;text-align: center;line-height: 35px;}
-.myShopBtn i{width: 16px;height: 16px;position: absolute;right: 45px;top: 8px;color: #fff;
-	background-color: #F10215;border-radius: 100%;font-style: normal;}
-.rightCode{width: 67px;height: 67px;position:absolute;right:-20px;top:35px;border: 1px solid #E3E4E5;
-	background: url(../images/weigit/icon_5.png) no-repeat;}
-.topNav{position: absolute;left: 230px;bottom: 0px;}
-.topNav li{float: left;padding: 0 20px;font-size: 16px;font-weight: bold;color: #555;position: relative;}
-.topNav .borR{float: left;width: 30px;height: 20px;font-size: 1px;overflow: hidden;padding: 0;margin-top: 7px;}
-.topNav li i{width: 34px; height: 19px;position:absolute;right: -15px;top: -15px;background: url(../images/weigit/icon_4.png) no-repeat;}
+.header {
+	width: 1190px;
+	height: 170px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header label {
+	width: 190px;
+	height: 170px;
+	float: left;
+	background: url(../images/logo.jpg) no-repeat center #fff;
+	/*box-shadow:0 1px 0 1px #999;*/
+}
+
+.userMenu {
+	width: 100%;
+	height: 30px;
+	color: #666;
+	background-color: #E3E4E5;
+	border: 1px solid #DDDDDD;
+}
+
+.userMenu label {
+	width: auto;
+	height: 30px;
+	float: left;
+	background: url(../images/weigit/icon_1.jpg) no-repeat left;
+	margin-left: 20px;
+	padding-left: 20px;
+	line-height: 30px;
+}
+
+.userMenu ul {
+	float: right;
+	padding-top: 5px;
+}
+
+.userMenu ul li {
+	display: inline;
+	padding: 0 10px;
+	/*line-height: 30px;*/
+	border-right: 1px solid #999;
+}
+
+.searchDiv {
+	width: 635px;
+	height: 55px;
+	position: absolute;
+	left: 350;
+	top: 55px;
+}
+
+.inTxt {
+	width: 500px;
+	height: 35px;
+	float: left;
+	font-size: 14px;
+	color: #999;
+	padding-left: 5px;
+	border: 1px solid #f00;
+}
+
+.inButton {
+	width: 50px;
+	height: 35px;
+	float: left;
+	border: 0px;
+	background: url(../images/weigit/icon_2.png) no-repeat center #F10215;
+	cursor: pointer;
+}
+
+.myShopBtn {
+	width: 190px;
+	height: 35px;
+	position: absolute;
+	right: 65px;
+	top: 55px;
+	color: #f00;
+	background: url(../images/weigit/icon_3.jpg) no-repeat 30px center #fff;
+	cursor: pointer;
+	border: 1px solid #E3E4E5;
+	font-size: 12px;
+	text-align: center;
+	line-height: 35px;
+}
+
+.myShopBtn i {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 45px;
+	top: 8px;
+	color: #fff;
+	background-color: #F10215;
+	border-radius: 100%;
+	font-style: normal;
+}
+
+.rightCode {
+	width: 67px;
+	height: 67px;
+	position: absolute;
+	right: -20px;
+	top: 35px;
+	border: 1px solid #E3E4E5;
+	background: url(../images/weigit/icon_5.png) no-repeat;
+}
+
+.topNav {
+	position: absolute;
+	left: 230px;
+	bottom: 0px;
+}
+
+.topNav li {
+	float: left;
+	padding: 0 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #555;
+	position: relative;
+}
+
+.topNav .borR {
+	float: left;
+	width: 30px;
+	height: 20px;
+	font-size: 1px;
+	overflow: hidden;
+	padding: 0;
+	margin-top: 7px;
+}
+
+.topNav li i {
+	width: 34px;
+	height: 19px;
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	background: url(../images/weigit/icon_4.png) no-repeat;
+}
 
 /*mianWrap*/
-.mianWrap{width: 1190px;height: 480px; margin: 10px auto;background-color: #fff;}
-.columnLeft{width: 190px;height: 480px;background-color: #666;border: 1px solid #fff;float: left;}
-.columnLeft ul{margin-top: 20px;}
-.columnLeft ul li{width: 100%;height: 30px;position: relative;}
-.columnLeft ul li a{font-size: 15px;color: #fff;line-height: 30px;text-decoration: none;padding-left: 15px;}
-.popMenu{width: 500px;height: 300px;background-color: #999;position: absolute;left: 190px;top: -20px;display: none;z-index: 6;}
-.popMenu p{font-size: 20px;color: #0f0;text-align: center;line-height:20px;padding: 10px 0 10px 0; }
-.columnLeft ul li:hover{background-color: #999;cursor: pointer;}
-.columnLeft ul li a:hover{color: #f00;cursor: pointer;}
-.columnLeft ul li:hover .popMenu{display: block;}
+.mianWrap {
+	width: 1190px;
+	height: 480px;
+	margin: 10px auto;
+	background-color: #fff;
+}
 
-.columnRight{width: 990px;height: 480px;float: right;}
-.sliderWrap{width: 780px;height: 340px;overflow: hidden;position: relative;float: left;}
-.sliderWrap ul{width: 3200px;height: 340px;position: absolute;top: 0px;left: 0px;}
-.sliderWrap ul li{width: 790px;height: 340px;float: left;}
-.sliderWrap ul li img{width: 790px;height: 340px;float: left;}
-.sliderWrap label,.sliderWrap span{width: 35px;height: 60px;position: absolute;top: 140px;cursor: pointer;background-color: #666;
-	font-size: 26px;text-align: center;line-height: 60px;z-index: 5;}
-.sliderWrap label{left: 0px;}
-.sliderWrap span{right: 0px;}
-.sliderWrap label:hover,.sliderWrap span:hover{background-color: #E3E4E5;}
-.loginR{width: 200px;height: 480px;float: right; margin-left: 10px; background-color: #E3E4E5;}
-.sliderWrap .olBg{width: 200px;height: 26px;background-color: #fff;opacity: 0.5;
-	position: absolute;bottom: 15px;left: 50%;margin-left: -100px;z-index: 3;border-radius: 10px;}
-.sliderWrap ol{width: 200px;height: 26px;position: absolute;bottom: 15px;left: 50%;margin-left: -100px;z-index: 4;}
-.sliderWrap ol li{width: 15px;height: 15px;float: left;background-color: #fff;margin: 6px 10px;border-radius:100%;}
-.sliderWrap ol li:hover{background-color: #f00;cursor: pointer;}
-.sliderWrap ol li.active{background-color: #f00;}
-.divAd,.divAd img{width: 385px;height: 130px;}
+.columnLeft {
+	width: 190px;
+	height: 480px;
+	background-color: #E3E4E5;
+	border: 1px solid #fff;
+	float: left;
+}
+
+.columnLeft ul {
+	margin-top: 20px;
+}
+
+.columnLeft ul li {
+	width: 100%;
+	height: 30px;
+	position: relative;
+}
+
+.columnLeft ul li a {
+	font-size: 15px;
+	color: #fff;
+	line-height: 30px;
+	text-decoration: none;
+	padding-left: 15px;
+	color: #333;
+}
+
+.popMenu {
+	width: 500px;
+	height: 300px;
+	background-color: #fff;
+	position: absolute;
+	left: 190px;
+	top: -20px;
+	display: none;
+	z-index: 6;
+}
+
+.popMenu p {
+	display: block;
+	width: 100px;
+	height: 30px;
+	float: left;
+	background-color: #498C94;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	margin: 10px;
+}
+
+.columnLeft ul li:hover {
+	background-color: #999;
+	cursor: pointer;
+}
+
+.columnLeft ul li a:hover {
+	color: #f00;
+	cursor: pointer;
+}
+
+.columnLeft ul li:hover .popMenu {
+	display: block;
+}
+
+.columnRight {
+	width: 990px;
+	height: 480px;
+	float: right;
+}
+
+.sliderWrap {
+	width: 780px;
+	height: 340px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+
+.sliderWrap ul {
+	width: 3200px;
+	height: 340px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.sliderWrap ul li {
+	width: 790px;
+	height: 340px;
+	float: left;
+}
+
+.sliderWrap ul li img {
+	width: 790px;
+	height: 340px;
+	float: left;
+}
+
+.sliderWrap label,
+.sliderWrap span {
+	width: 35px;
+	height: 60px;
+	position: absolute;
+	top: 140px;
+	cursor: pointer;
+	background-color: #666;
+	font-size: 26px;
+	text-align: center;
+	line-height: 60px;
+	z-index: 5;
+}
+
+.sliderWrap label {
+	left: 0px;
+}
+
+.sliderWrap span {
+	right: 0px;
+}
+
+.sliderWrap label:hover,
+.sliderWrap span:hover {
+	background-color: #E3E4E5;
+}
+
+.loginR {
+	width: 200px;
+	height: 480px;
+	float: right;
+	margin-left: 10px;
+	background-color: #E3E4E5;
+}
+
+.sliderWrap .olBg {
+	width: 200px;
+	height: 26px;
+	background-color: #fff;
+	opacity: 0.5;
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 3;
+	border-radius: 10px;
+}
+
+.sliderWrap ol {
+	width: 200px;
+	height: 26px;
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 4;
+}
+
+.sliderWrap ol li {
+	width: 15px;
+	height: 15px;
+	float: left;
+	background-color: #fff;
+	margin: 6px 10px;
+	border-radius: 100%;
+}
+
+.sliderWrap ol li:hover {
+	background-color: #f00;
+	cursor: pointer;
+}
+
+.sliderWrap ol li.active {
+	background-color: #f00;
+}
+
+.divAd,
+.divAd img {
+	width: 385px;
+	height: 130px;
+}
 
 /*productWrap*/
-.productWrap{width: 1190px;margin: 0 auto;}
-.h1Style{width: 100%;height: 32px;border-bottom: 3px dotted #c1c1c1;position: relative;}
-.h1Style p{display: block;position: absolute;left: 50%;top: 10px;margin-left: -100px;
-	font-size: 30px;color: #333;background-color:#F6F6F6; padding: 0 60px;}
-.productList{width: 100%;height: 170px;margin-top: 30px;}
-.productList li{width: 390px;height: 170px;float: left;margin-right: 10px;
-	background-repeat: no-repeat;background-position: 162px center;}
-.productList li.bg1{background-color: #ACA8B0;}
-.productList li.bg2{background-color: #C2DBDE;}
-.productList li.bg3{background-color: #ECEAD9;}
-.productList li img.transitionImg{float: right;width: 192px;height: 170px; transition : margin-right 0.3s ease-in;}
-.productList li:hover img.transitionImg{margin-right: 40px;}
-.productWrap li dl{width:140px;height: 170px;float: left;}
-.productWrap li dl.bg1{background: #5C5566;}
-.productWrap li dl.bg2{background: #498C94;}
-.productWrap li dl.bg3{background: #DBCF6E;}
-.productList li dl dt{width:100px;height: 39px;margin:45px auto 10px auto;
-	border-top:2px solid #fff;border-bottom:2px solid #fff;
-	text-align: center;line-height: 39px;font-size: 20px;color: #fff;}
-.productList li dl dd{width:100px;margin:0 auto;text-align: left;line-height: 22px;font-size: 14px;color: #fff;}
+.productWrap {
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.h1Style {
+	width: 100%;
+	height: 32px;
+	border-bottom: 3px dotted #c1c1c1;
+	position: relative;
+}
+
+.h1Style p {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	margin-left: -100px;
+	font-size: 30px;
+	color: #333;
+	background-color: #F6F6F6;
+	padding: 0 60px;
+}
+
+.productList {
+	width: 100%;
+	height: 170px;
+	margin-top: 30px;
+}
+
+.productList li {
+	width: 33%;
+	height: 170px;
+	float: left;
+	margin-right: 2px;
+	background-repeat: no-repeat;
+	background-position: 162px center;
+}
+
+.productList li.bg1 {
+	background-color: #ACA8B0;
+}
+
+.productList li.bg2 {
+	background-color: #C2DBDE;
+}
+
+.productList li.bg3 {
+	background-color: #ECEAD9;
+}
+
+.productList li img.transitionImg {
+	float: right;
+	width: 192px;
+	height: 170px;
+	transition: margin-right 0.3s ease-in;
+}
+
+.productList li:hover img.transitionImg {
+	margin-right: 40px;
+}
+
+.productWrap li dl {
+	width: 140px;
+	height: 170px;
+	float: left;
+}
+
+.productWrap li dl.bg1 {
+	background: #5C5566;
+}
+
+.productWrap li dl.bg2 {
+	background: #498C94;
+}
+
+.productWrap li dl.bg3 {
+	background: #DBCF6E;
+}
+
+.productList li dl dt {
+	width: 100px;
+	height: 39px;
+	margin: 45px auto 10px auto;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	text-align: center;
+	line-height: 39px;
+	font-size: 20px;
+	color: #fff;
+}
+
+.productList li dl dd {
+	width: 100px;
+	margin: 0 auto;
+	text-align: left;
+	line-height: 22px;
+	font-size: 14px;
+	color: #fff;
+}
