@@ -62,12 +62,7 @@ SubNavModule.prototype={
 	getData:function(){
 		var _self=this;
 		getAjax(APILIST.subNavApi,function(d){
-			var _d = [];
-			if(d.responseText) {
-				_d = JSON.parse(d.responseText).productList;
-			}else{
-				_d=d.productList	
-			}
+			var _d= d.productList	
 			var _length=_d.length;
 			_self.createLi(_d, _length);
 		});

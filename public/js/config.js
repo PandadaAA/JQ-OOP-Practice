@@ -11,21 +11,19 @@
 
  //api接口列表
  var APILIST={
- 	//本地数据
+ 	//首页本地数据
  	sliderImg:'../data/sliderImg.js',
 	topNavColumn:'../data/topNavColumn.js',
 	subNavApi:'../data/navNavColumn.js',
 	productBlock :'../data/productBlock.js',
-
- 	//远程接口
- 	smallImgData : SITEURL + 'zuoye/php/smallImgData.php',
-
- 	//商品详情页pid
- 	param : SITEURL + 'zuoye/php/param.php',
- 	//商品详情页addressMenu
-	province : SITEURL + 'zuoye/php/province.php',
-	city : SITEURL + 'zuoye/php/city.php',
-	area : SITEURL + 'zuoye/php/area.php',
+	//商品详情
+	param : '../data/param.js',
+ 	//商品预览图
+ 	smallImgData : '../data/smallImgData.js',
+ 	//省市县
+	province : '../data/province.js',
+	city :  '../data/city.js',
+	area : '../data/area.js',
 
 	//购物车列表
 	cartUlLi : SITEURL + 'zuoye/php/cartUlLi.php',

@@ -24,10 +24,9 @@ $(function(){
 	//console.log( _pid );
 
 	gatParam(APILIST.param, _pid, function(d){
-		var _txt=d.productInfo;
-		$('#h1Id').html(_txt[0].title);
-		$('#h2Id').html(_txt[1].pInfo);
-		$('#h3Id').html(_txt[2].info);
+		$('#h1Id').html(d.title);
+		$('#h2Id').html(d.pInfo);
+		$('#h3Id').html(d.info);
 	})
  };
 
@@ -230,7 +229,7 @@ chooseGoods.prototype={
 	addBtnEvent:function(){
 		var _self=this;
 		_self.buyAddId.on('click',function(){
-			if(_self.count<999){
+			if(_self.count<10){
 				_self.count++;
 				_self.buyNumId.val(_self.count);
 			}else{

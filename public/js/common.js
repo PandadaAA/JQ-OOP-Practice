@@ -19,7 +19,7 @@ function getAjax(_url,callback){
 			callback(d);
 		},
 		error:function(d){
-			callback(d);
+			callback(JSON.parse(d.responseText));
 		}
 	})
 };
@@ -35,7 +35,7 @@ function getAjaxJsonp(_url,callback){
 			callback(d);
 		},
 		error:function(d){
-			callback(d);
+			callback(JSON.parse(d.responseText));
 		}
 	})
 };
@@ -66,6 +66,9 @@ function gatParam(_url ,_pid ,callback){
 		jsonp:'jsoncallback',
 		success:function(d){
 			callback(d);
+		},
+		error:function(d){
+			callback(JSON.parse(d.responseText));
 		}
 	});
 }
@@ -80,6 +83,9 @@ function getCartJsonp(_url ,_d ,callback){
 		jsonp:'jsoncallback',
 		success:function(d){
 			callback(d);
+		},
+		error:function(d){
+			callback(JSON.parse(d.responseText));
 		}
 	});
 }//它需要的参数格式是数组  '[{"num"=3,"price"=3698}]'
@@ -94,6 +100,9 @@ function checkGoodsJsonp(_url ,_d ,callback){
 		jsonp:'jsoncallback',
 		success:function(d){
 			callback(d);
+		},
+		error:function(d){
+			callback(JSON.parse(d.responseText));
 		}
 	});
 }//它需要的参数格式是字符串 

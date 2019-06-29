@@ -179,12 +179,7 @@ function createSubNav(){
 //享品质产品列表
 function productBlockFn(){
 	getAjaxJsonp(APILIST.productBlock,function(d){		
-		var _d=[];
-		if(d.responseText) {
-			_d = JSON.parse(d.responseText);
-		}else {
-			_d = d;
-		}
+		var _d = d;
 		var _length=_d.length;
 	 	var _productBlock=$('#productBlock');
 
