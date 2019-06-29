@@ -5,7 +5,6 @@
  */
 
 $(function(){
-//首屏侧边菜单 oo版本
 	var subNavConfig = {
 		subNavUlId: $ ('#subNavUlId')
 	}
@@ -13,10 +12,9 @@ $(function(){
 });
 
 
-//构造器 (请大写首字母)
  function SubNavModule(_config){
  	 for(var i in _config){
- 		this[i]=_config[i];//for in 遍历
+ 		this[i]=_config[i];
  	}
  	this.init();
  }

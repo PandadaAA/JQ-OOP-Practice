@@ -4,12 +4,12 @@
  *info:购物车模块
  */
 
-//模块入口
+
 $(function(){
 	new CartModule();
 });
 
-//购物车入口
+
 function CartModule(){
 	this.cartBodyWrapId=$('#cartBodyWrapId');
 	this.totalGoodsId=$('#totalGoodsId');
@@ -120,26 +120,43 @@ CartModule.prototype={
 	//单个商品价格合计
 	cartCalculate:function(_v, _u, _sum){
 		var _self=this;
-		var _d='[{"num":'+ _v+',"price":'+ _u+'}]';
+		//var _d='[{"num":'+ _v+',"price":'+ _u+'}]';
+		// getCartJsonp(APILIST.cart, _d ,function(d){
+		// 	_sum.html('￥'+d);
 
-		getCartJsonp(APILIST.cart, _d ,function(d){
-			_sum.html('￥'+d);
+		// 	//点击按钮时更新复选框input的商品属性
+		// 	var _goodsCbBox=_sum.parents('.cartItem').children('input,cbBox');
+		// 	_goodsCbBox.attr({
+		// 		'data-num':_v,
+		// 		'data-total':d
+		// 	});
 
-			//点击按钮时更新复选框input的商品属性
-			var _goodsCbBox=_sum.parents('.cartItem').children('input,cbBox');
-			_goodsCbBox.attr({
-				'data-num':_v,
-				'data-total':d
-			});
+		// 	//点击按钮时更新底部商品合计栏的信息
+		// 	var _d=_self.ischeckedInfo();
+		// 	checkGoodsJsonp(APILIST.goodsCheck, JSON.stringify(_d), function(d){
+		// 		_self.totalGoodsId.html(d.num);
+		// 		_self.checkedGoodsId.html(d.num);
+		// 		_self.totalMoneyId.html(d.price);
+		// 	});		
+		// });
 
-			//点击按钮时更新底部商品合计栏的信息
-			var _d=_self.ischeckedInfo();
-			checkGoodsJsonp(APILIST.goodsCheck, JSON.stringify(_d), function(d){
-				_self.totalGoodsId.html(d.num);
-				_self.checkedGoodsId.html(d.num);
-				_self.totalMoneyId.html(d.price);
-			});		
+		//以下是前端模拟实现
+		var _d= Math.floor(_v*_u);
+		_sum.html('￥'+_d);
+		var _goodsCbBox=_sum.parents('.cartItem').children('input,cbBox');
+		_goodsCbBox.attr({
+			'data-num':_v,
+			'data-total':_d
 		});
+		var cDom=_self.ischeckedInfo();
+		var totelNum = 0, totalPrice = 0;
+		cDom.forEach((item)=> {
+			totelNum += Number(item.num);
+			totalPrice += Number(item.price);
+		})
+		_self.totalGoodsId.html(totelNum);
+		_self.checkedGoodsId.html(totelNum);
+		_self.totalMoneyId.html(totalPrice);
 	},
 	//返回被选中商品信息，更新商品栏单选按钮属性
 	ischeckedInfo:function(){
@@ -180,13 +197,23 @@ CartModule.prototype={
 	goodsFootInfo:function(){
 		//返回被选中商品信息
 		var _self=this;
-		var _d=_self.ischeckedInfo();
+		// var _d=_self.ischeckedInfo();
+		// checkGoodsJsonp(APILIST.goodsCheck, JSON.stringify(_d), function(d){
+		// 	_self.totalGoodsId.html(d.num);
+		// 	_self.checkedGoodsId.html(d.num);
+		// 	_self.totalMoneyId.html(d.price);
+		// })
 
-		checkGoodsJsonp(APILIST.goodsCheck, JSON.stringify(_d), function(d){
-			_self.totalGoodsId.html(d.num);
-			_self.checkedGoodsId.html(d.num);
-			_self.totalMoneyId.html(d.price);
+		//以下是前端模拟实现
+		var cDom=_self.ischeckedInfo();
+		var totelNum = 0, totalPrice = 0;
+		cDom.forEach((item)=> {
+			totelNum += Number(item.num);
+			totalPrice += Number(item.price);
 		})
+		_self.totalGoodsId.html(totelNum);
+		_self.checkedGoodsId.html(totelNum);
+		_self.totalMoneyId.html(totalPrice);
 	},
 	//全选按钮事件
 	checkAllEvent:function(){
@@ -238,5 +265,5 @@ CartModule.prototype={
 	}
 }
 
-//整个购物车逻辑以商品栏单选按钮里的属性data-num,data-total为扭点
+//整个购物车逻辑以商品栏单选按钮里的属性data-num,data-total作为记录点
 

@@ -1,7 +1,7 @@
 /**************
  *date:201707
  *author:pan
- *info:express
+ *info:express起一个本地服务
  */
 var express = require('express');
 var app = express();

@@ -1,7 +1,7 @@
 /************
  *date=201707
  *author:pan
- *info:生成购物车，产品列表Tpl
+ *info:购物车产品列表的templete模板
  */
 
  function createGoodsListTpl(_cartList){

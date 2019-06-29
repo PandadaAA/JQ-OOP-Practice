@@ -5,7 +5,6 @@
  */
 
 $(function(){
-//首屏轮播图 oo版本
 	var sliderConfig = {
 		toLeftBtn : $('#toLeftBtn'),
  		toRightBtn : $('#toRightBtn'),
@@ -17,13 +16,12 @@ $(function(){
 });
 
 
-//构造器 (请大写首字母)
  function SliderWodule(_config){
  	for(var i in _config){
- 		this[i]=_config[i];//for in 遍历
+ 		this[i]=_config[i];
  	}
  	this.numI =0;
- 	this.init();//init是一个公共方法
+ 	this.init();
 }
 
 //prptoytpe --原型

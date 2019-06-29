@@ -6,7 +6,7 @@
 
 
  //站点跟链接
- var SITEURL='http://www.webfeel.org/';
+ var SITEURL='http://www.xxx.com/';
 
 
  //api接口列表
@@ -24,11 +24,12 @@
 	province : '../data/province.js',
 	city :  '../data/city.js',
 	area : '../data/area.js',
-
 	//购物车列表
-	cartUlLi : SITEURL + 'zuoye/php/cartUlLi.php',
+	cartUlLi : '../data/cartUlLi.js',
+
+	//(现实业务中关于金钱的计算应该交给后端处理)
 	//计算单个商品总数和总价
-	cart : SITEURL + 'zuoye/php/cart.php',
+	cart : SITEURL + 'woshishei',
 	//check被选中的商品的总数和总价
-	goodsCheck : SITEURL + 'zuoye/php/goodsCheck.php',
+	goodsCheck : SITEURL + 'wozaina',
  }

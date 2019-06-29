@@ -8,7 +8,7 @@
 function searchFn(){
 	$('#inTxt').on({
 		focus:function(){$(this).attr('value','');},
-		blur:function(){$(this).attr('value','点我试试');},
+		//blur:function(){$(this).attr('value','点我试试');},
 	});    //on()封装了js的addEventListener,它可以绑定多个事件
 	$('.inButton').on('click',function(){
 		alert('你点击了搜索'+ '搜索条件为：'+ $('#inTxt').val());

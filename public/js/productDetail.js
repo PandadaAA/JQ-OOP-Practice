@@ -5,7 +5,6 @@
  */
 
 
-//入口
 $(function(){
 	productDetailFn();
 

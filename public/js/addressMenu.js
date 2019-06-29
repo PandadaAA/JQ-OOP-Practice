@@ -1,7 +1,7 @@
 /***********
  *date=201707
  *author:pan
- *info:产品详情页--地址栏菜单
+ *info:产品详情页--省市县联动
  */
 
  function addressMenuFn(){
